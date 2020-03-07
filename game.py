@@ -1,6 +1,7 @@
 # random number game
 import random
 import computerGuesses
+import bonus
 
 gameModeMess = """Select a gamemode:\n
 1.) User guesses a number\n
@@ -20,7 +21,8 @@ if gameMode == 1:
     Welcome to the number guessing game! Choose a number for the range:\n
     1.) A number between 0-10\n
     2.) A number between 0-100\n
-    3.) A number between 0-1000\n\n
+    3.) A number between 0-1000\n
+    4.) Bonus Features\n\n
     """
 
     input1 = int(input(startingMessage))
@@ -36,6 +38,9 @@ if gameMode == 1:
         elif input1 == 3:
             randomNum = random.randrange(0, 1000, 5)
             correctInput = True
+        elif input1 == 4:
+            bonus.bonus_feature()
+            exit(1)
         else:
             print("Incorrect value, select 1, 2, or 3\n")
             input1 = int(input(startingMessage))
