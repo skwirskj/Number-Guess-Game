@@ -52,6 +52,10 @@ if gameMode == 1:
             break
         else:
             print(f"Incorrect guess of {currGuess}. Try again!\n")
+            if currGuess < randomNum:
+                print(f"Your guess of {currGuess} is less than the number.\n")
+            else:
+                print(f"Your guess of {currGuess} is greater than the number.\n")
 
     if not guessCorrect:
         print(f"The random value was {randomNum}. Sorry you did not guess it. Better luck next time!\n")
